@@ -13,13 +13,7 @@ args.forEach(function(row){
 });
 
 }
-let arr = ['yolo', 'salut', 'bonjour'];
-log('warning', 'Message: display my data!', arr, 'Another message: hey there!', arr);
-log('error', arr, 'hey');
-log('info', arr, 'hey');
 
-// TODO : array / object...
-var arr_2 = ['first', ['second1', 'second2', ['third1', 'third2','third3','intru1'], ['forth1', 'forth2','forth3','intru2']]];
 function log_arr(arr){
 
   var result = [], countDepth = [], str = '';
@@ -30,7 +24,7 @@ function log_arr(arr){
 
     for(var k = 0; k<countDepth.length;k++){
 
-      if(result[i] == countDepth[k] && result[i - 1] !== countDepth[k]){
+      if(result[i] == countDepth[k]){
         str+='\t';
         j=0;
       }
@@ -52,9 +46,3 @@ function flatten(arr, result, countDepth){
     }
   }
 }
-log('info', 'message : multidimensional array', arr_2);
-
-function log_object(obj){
-
-}
-//TODO : object et JSON (object + array). Fichier bash pour tester les fonctionnalités.
